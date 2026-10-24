@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antojitos del Pollo - El Mejor Sabor</title>
+    <style>
+        /* Estilos Generales */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #121212; /* Fondo oscuro */
+            color: #f1f1f1;
+            line-height: 1.6;
+        }
+
+        /* Encabezado con Logo */
+        header {
+            background-color: #000000;
+            border-bottom: 4px solid #ff6600; /* Borde Zapote */
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Contenedor del Logo */
+        .logo-container {
+            margin-bottom: 1rem;
+        }
+
+        .logo-container img {
+            width: 130px;
+            height: 130px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid #ff6600; /* Marco zapote alrededor del logo */
+            background-color: #ffffff;
+            padding: 3px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: #ff6600; /* Color Zapote */
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 0.3rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: #dddddd;
+            font-weight: 300;
+        }
+
+        /* Navegación */
+        nav {
+            background-color: #1a1a1a;
+            border-bottom: 2px solid #333;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            padding: 0.8rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.5rem 1.2rem;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #ff6600; /* Zapote al pasar el mouse */
+            color: #000000;
+        }
+
+        /* Contenido Principal */
+        main {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+
+        section {
+            background-color: #1e1e1e;
+            border: 1px solid #333333;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        h2 {
+            color: #ff6600; /* Zapote */
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #ff6600;
+            display: inline-block;
+            padding-bottom: 0.3rem;
+        }
+
+        /* Galería de Productos */
+        .productos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .producto-card {
+            background-color: #262626;
+            border: 1px solid #ff6600; /* Marco zapote */
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            padding: 1rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .producto-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(255, 102, 0, 0.3);
+        }
+
+        .producto-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .producto-card h3 {
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+
+        .producto-card p {
+            font-size: 0.95rem;
+            color: #ccc;
+        }
+
+        /* Lista de Integrantes */
+        .integrantes-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .integrantes-list li {
+            background-color: #000000;
+            padding: 1rem;
+            border-left: 5px solid #ff6600;
+            border-radius: 5px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        /* Pie de página */
+        footer {
+            background-color: #000000;
+            border-top: 3px solid #ff6600;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        footer p {
+            margin-bottom: 0.3rem;
+            color: #aaaaaa;
+        }
+
+        footer strong {
+            color: #ff6600;
+        }
+    </style>
+</head>
+<body> 
+
+    <!-- Encabezado con Logo -->
+    <header> 
+        <div class="logo-container">
+            <!-- Recuerda guardar tu logo en la carpeta imagenes como logo.jpg -->
+            <img src="imagenes/logo.jpeg" alt="Logo Antojitos del Pollo">
+        </div>
+        <h1>Antojitos del Pollo</h1> 
+        <p>El sabor crujiente y delicioso que te alegra el día</p> 
+    </header> 
+ 
+    <!-- Menú de Navegación -->
+    <nav> 
+        <a href="#inicio">Inicio</a> 
+        <a href="#productos">Nuestros Productos</a> 
+        <a href="#equipo">Equipo de Trabajo</a> 
+        <a href="#contacto">Contacto</a> 
+    </nav> 
+ 
+    <!-- Contenido Principal -->
+    <main> 
+        <!-- Sección Inicio -->
+        <section id="inicio"> 
+            <h2>¿Quiénes somos?</h2> 
+            <p>
+                En <strong>Antojitos del Pollo</strong> somos una empresa dedicada a la preparación y venta de las mejores delicias hechas a base de pollo fresco y sazonado con nuestra receta secreta. Nuestro compromiso es ofrecer productos crujientes, sabrosos y de la más alta calidad para deleitar tu paladar en cualquier momento del día.
+            </p> 
+        </section> 
+ 
+        <!-- Sección Productos -->
+        <section id="productos"> 
+            <h2>Nuestros Deliciosos Productos</h2> 
+            <p>Descubre el menú preparado especialmente para ti:</p> 
+            
+            <div class="productos-grid">
+                <!-- Producto 1: Empanadas -->
+                <article class="producto-card">
+                    <img src="imagenes/123.jpg" alt="Empanadas de Pollo"> 
+                    <h3>Empanadas de Pollo</h3>
+                    <p>Crujientes por fuera, rellenas de pollo jugoso y el toque perfecto de sazón.</p>
+                </article>
+
+                <!-- Producto 2: Arepas Rellenas -->
+                <article class="producto-card">
+                    <img src="imagenes/super.jpg" alt="Arepas Rellenas"> 
+                    <h3>Arepas Rellenas</h3>
+                    <p>Masa dorada a la plancha abundante de pollo desmechado y abundante queso.</p>
+                </article>
+
+                <!-- Producto 3: Pinchos de Pollo -->
+                <article class="producto-card">
+                    <img src="imagenes/perro12.jpg" alt="Pinchos de Pollo"> 
+                    <h3>Pinchos de Pollo</h3>
+                    <p>Trozos suaves de pechuga marinada asados a la parrilla con verduras frescas.</p>
+                </article>
+
+                <!-- Producto 4: Rollitos de Pollo -->
+                <article class="producto-card">
+                    <img src="imagenes/sddefault.jpg" alt="Rollitos de Pollo"> 
+                    <h3>Rollitos de Pollo</h3>
+                    <p>Filetes de pollo rellenos empanizados al horno con salsa especial.</p>
+                </article>
+            </div>
+        </section> 
+
+        <!-- Sección Equipo -->
+        <section id="equipo">
+            <h2>Equipo Emprendedor</h2>
+            <p>Este proyecto fue desarrollado con dedicación por los siguientes estudiantes:</p>
+            <ul class="integrantes-list"> 
+                <li>👨‍🎓 Hian Ducuara</li> 
+                <li>👩‍🎓 Sofía Sánchez</li> 
+                <li>👩‍🎓 Andrea Moya</li> 
+                <li>👨‍🎓 Iván Ducuara</li> 
+            </ul> 
+        </section>
+
+        <!-- Sección Contacto -->
+        <section id="contacto"> 
+            <h2>Más información y Pedidos</h2> 
+            <p>¿Te antojaste? Haz tu pedido escolar o consulta nuestra disponibilidad comunicándote con cualquiera de los integrantes de nuestro equipo.</p> 
+        </section> 
+    </main> 
+ 
+    <!-- Pie de Página -->
+    <footer> 
+        <p><strong>Antojitos del Pollo</strong> &copy; 2026 - Todos los derechos reservados</p>
+        <p>Proyecto escolar de grado décimo</p> 
+    </footer> 
+
+</body> 
+</html>
